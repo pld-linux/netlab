@@ -1,4 +1,5 @@
 Summary:	Netlab neural network software
+Summary(pl):	Netlab - oprogramowanie do sieci neuronowych
 Name:		netlab
 Version:	3.2
 Release:	0.1
@@ -9,8 +10,8 @@ Source0:	http://www.ncrg.aston.ac.uk/%{name}/%{name}.tar.gz
 Source1:	http://www.ncrg.aston.ac.uk/%{name}/nethelp.tar.gz
 # Source1-md5:	750f81eaf3c9eb4d619494197d5cefea
 URL:		http://www.ncrg.aston.ac.uk/netlab/
-Requires:	octave
 BuildRequires:	octave
+Requires:	octave
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,27 +24,34 @@ applications development.
 Netlab has beed designed to be used with (commercial) Matlab software,
 but it works well with Matlab-compatible GNU Octave.
 
+%description -l pl
+Zestaw narzêdzi Netlab zosta³ zaprojektowany aby dostarczyæ g³ówne
+narzêdzia potrzebne do symulacji teoretycznie dobrze wykonanych
+algorytmów sieci neuronowych i zwi±zanych z nimi modeli do zastosowañ
+w nauczaniu, badaniach i tworzeniu aplikacji.
+
 %package doc
 Summary:	Help files for Netlab neural network software
+Summary(pl):	Pliki pomocy dla oprogramowania do sieci neuronowych Netlab
 Group:		Applications/Math
-Requires:	%{name}
+Requires:	%{name} = %{version}-%{release}
 
 %description doc
 The Netlab toolbox help files.
 
-%prep
-%setup -q -a 0 -c %{name}
-%setup -q -a 1 -c %{name}-doc
+%description doc -l pl
+Pliki pomocy dla zestawu narzêdzi Netlab.
 
-%build
+%prep
+%setup -q -c -a1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT`octave-config --m-site-dir`/netlab/
-install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}/
+install -d $RPM_BUILD_ROOT`octave-config --m-site-dir`/netlab
+install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
+
 cp -a *.m $RPM_BUILD_ROOT`octave-config --m-site-dir`/netlab/
 cp -a *.htm LICENSE $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,6 +72,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
+%dir %{_docdir}/%{name}-%{version}
 %doc %{_docdir}/%{name}-%{version}/LICENSE
 %( octave-config --m-site-dir )/%{name}
 
