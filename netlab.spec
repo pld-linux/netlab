@@ -1,5 +1,5 @@
 Summary:	Netlab neural network software
-Summary(pl):	Netlab - oprogramowanie do sieci neuronowych
+Summary(pl.UTF-8):   Netlab - oprogramowanie do sieci neuronowych
 Name:		netlab
 Version:	3.2
 Release:	0.1
@@ -24,23 +24,23 @@ applications development.
 Netlab has beed designed to be used with (commercial) Matlab software,
 but it works well with Matlab-compatible GNU Octave.
 
-%description -l pl
-Zestaw narzêdzi Netlab zosta³ zaprojektowany aby dostarczyæ g³ówne
-narzêdzia potrzebne do symulacji teoretycznie dobrze wykonanych
-algorytmów sieci neuronowych i zwi±zanych z nimi modeli do zastosowañ
+%description -l pl.UTF-8
+Zestaw narzÄ™dzi Netlab zostaÅ‚ zaprojektowany aby dostarczyÄ‡ gÅ‚Ã³wne
+narzÄ™dzia potrzebne do symulacji teoretycznie dobrze wykonanych
+algorytmÃ³w sieci neuronowych i zwiÄ…zanych z nimi modeli do zastosowaÅ„
 w nauczaniu, badaniach i tworzeniu aplikacji.
 
 %package doc
 Summary:	Help files for Netlab neural network software
-Summary(pl):	Pliki pomocy dla oprogramowania do sieci neuronowych Netlab
+Summary(pl.UTF-8):   Pliki pomocy dla oprogramowania do sieci neuronowych Netlab
 Group:		Applications/Math
 Requires:	%{name} = %{version}-%{release}
 
 %description doc
 The Netlab toolbox help files.
 
-%description doc -l pl
-Pliki pomocy dla zestawu narzêdzi Netlab.
+%description doc -l pl.UTF-8
+Pliki pomocy dla zestawu narzÄ™dzi Netlab.
 
 %prep
 %setup -q -c -a1
