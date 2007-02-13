@@ -1,5 +1,5 @@
 Summary:	Netlab neural network software
-Summary(pl.UTF-8):   Netlab - oprogramowanie do sieci neuronowych
+Summary(pl.UTF-8):	Netlab - oprogramowanie do sieci neuronowych
 Name:		netlab
 Version:	3.2
 Release:	0.1
@@ -32,7 +32,7 @@ w nauczaniu, badaniach i tworzeniu aplikacji.
 
 %package doc
 Summary:	Help files for Netlab neural network software
-Summary(pl.UTF-8):   Pliki pomocy dla oprogramowania do sieci neuronowych Netlab
+Summary(pl.UTF-8):	Pliki pomocy dla oprogramowania do sieci neuronowych Netlab
 Group:		Applications/Math
 Requires:	%{name} = %{version}-%{release}
 
